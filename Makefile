@@ -3,7 +3,7 @@
 # Brandon Amos <http://bamos.github.io> and
 # Ellis Michael <http://ellismichael.com>
 
-WEBSITE_DIR=$(HOME)/repos/website
+WEBSITE_DIR=$(HOME)/phd/reputation/dekura.github.io
 WEBSITE_PDF=$(WEBSITE_DIR)/data/cv.pdf
 WEBSITE_MD=$(WEBSITE_DIR)/_includes/cv.md
 WEBSITE_DATE=$(WEBSITE_DIR)/_includes/last-updated.txt

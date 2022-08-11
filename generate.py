@@ -129,7 +129,7 @@ def get_pub_md(context, config):
             return f'''
 <tr id="tr-{pub['ID']}" {tr_style}>
 <td align='right' style='padding-left:0;padding-right:0;'>
-{prefix}{gidx}.
+[{prefix}{gidx}] 
 </td>
 <td>
 {img_str}
@@ -187,6 +187,7 @@ def get_pub_md(context, config):
     include_image = config['include_image']
     sort_bib = config['sort_bib']
     group_by_year = config['group_by_year']
+    prefix_reverse = config['prefix_reverse']
 
     contents = {}
     pubs = load_and_replace(config['file'])
@@ -195,6 +196,8 @@ def get_pub_md(context, config):
     if sort_bib:
         pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
 
+    pubs_len = len(pubs)
+
     if group_by_year:
         for pub in pubs:
             m = re.search('(\d{4})', pub['year'])
@@ -202,7 +205,13 @@ def get_pub_md(context, config):
             pub['year_int'] = int(m.group(1))
 
         details = ''
-        gidx = 1
+        # change the pub idx to reverse sequence.
+        
+        if prefix_reverse:
+            gidx = pubs_len
+        else:
+            gidx = 1
+
         for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
             print_year = year >= 2015
 
@@ -215,10 +224,13 @@ def get_pub_md(context, config):
 
             for i, pub in enumerate(year_pubs):
                 details += _get_pub_str(
-                    pub, '', gidx,
+                    pub, config['prefix'], gidx,
                     include_image=include_image,
                 ) + sep
-                gidx += 1
+                if prefix_reverse:
+                    gidx -= 1
+                else:
+                    gidx += 1
 
             if print_year and year > 2015:
                 details += '</table>\n'
@@ -305,14 +317,13 @@ def get_pub_latex(context, config):
             note_str = f"({pub['_note']})"
         else:
             note_str = ''
-
         return rf'''
 \begin{{minipage}}{{\textwidth}}
 \begin{{tabular}}[t]{{p{{8mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
-{highlight_color} \hfill{prefix}{gidx}.\hspace*{{1mm}} && \textit{{{title}}} {links} \\
+{highlight_color} \hfill [{prefix}{gidx}] && \textit{{{title}}} {links} \\
 {highlight_color} && {author_str} \\
 {highlight_color} && {year_venue} {note_str} \\
-\end{{tabular}} \\[2mm]
+\end{{tabular}} \\
 \end{{minipage}}'''
 
     def load_and_replace(bibtex_file):
@@ -327,6 +338,7 @@ def get_pub_latex(context, config):
 
     sort_bib = config['sort_bib']
     group_by_year = config['group_by_year']
+    prefix_reverse = config['prefix_reverse']
 
     contents = {}
     pubs = load_and_replace(config['file'])
@@ -335,6 +347,8 @@ def get_pub_latex(context, config):
     if sort_bib:
         pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
 
+    len_pubs = len(pubs)
+
     if group_by_year:
         for pub in pubs:
             m = re.search('(\d{4})', pub['year'])
@@ -342,7 +356,12 @@ def get_pub_latex(context, config):
             pub['year_int'] = int(m.group(1))
 
         details = ''
-        gidx = 1
+
+        if prefix_reverse:
+            gidx = len_pubs
+        else:
+            gidx = 1
+
         for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
             print_year = year >= 2015
             if print_year:
@@ -352,8 +371,11 @@ def get_pub_latex(context, config):
                 details += rf'\subsection{{{year_str}}}' + '\n'
 
             for i, pub in enumerate(year_pubs):
-                details += _get_pub_str(pub, '', gidx) + sep
-                gidx += 1
+                details += _get_pub_str(pub, config['prefix'], gidx) + sep
+                if prefix_reverse:
+                    gidx -= 1
+                else:
+                    gidx += 1
 
     else:
         assert False
