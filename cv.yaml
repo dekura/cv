@@ -41,7 +41,7 @@ about: |
 
 current_position:
   - place: CUHK
-    location: Hong Kong 
+    location: Hong Kong
     title: Ph.D. Student
     dates: 2021 -- Present
 
@@ -132,6 +132,7 @@ all_publications:
     'Lei Ye' : 'https://noahlab.com.hk/'
     'Liangjian Wen' : 'https://scholar.google.com/citations?user=jwHflLcAAAAJ'
     'Jianzhuang Liu' : 'https://scholar.google.com/citations?user=sKauaAwAAAAJ'
+    'Hongduo Liu' : 'https://liuhongduosc.github.io/'
 
 
 
