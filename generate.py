@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-"""Generates LaTeX, markdown, and plaintext copies of my cv."""
+"""Generates LaTeX, markdown, and plaintext copies of the Awesome-AI4EDA."""
 
 __author__ = [
-    'Brandon Amos <http://bamos.github.io>',
-    'Ellis Michael <http://ellismichael.com>',
+    'Guojin Chen <https://gjchen.me>',
 ]
 
 import argparse
@@ -43,34 +42,31 @@ def get_pub_md(context, config):
 
     def _format_author_list(immut_author_list):
         formatted_authors = []
+        show_author_url = config["show_author_url"]
         for author in immut_author_list:
             new_auth = author.split(", ")
             assert len(new_auth) == 2
             new_auth = new_auth[1] + " " + new_auth[0]
             author_urls = config['author_urls']
+            if show_author_url:
+                k = list(filter(lambda k: k in new_auth, author_urls.keys()))
+                if len(k) == 0 and config['name'] not in new_auth:
+                    print(f"+ Author URL not found for {new_auth}")
 
-            k = list(filter(lambda k: k in new_auth, author_urls.keys()))
-            if len(k) == 0 and config['name'] not in new_auth:
-                print(f"+ Author URL not found for {new_auth}")
+                new_auth = new_auth.replace(' ', '&nbsp;')
+                if len(k) > 0:
+                    assert len(k) == 1, k
+                    url = author_urls[k[0]]
+                    new_auth = f"<a href='{url}' target='_blank'>{new_auth}</a>"
 
-            new_auth = new_auth.replace(' ', '&nbsp;')
-            if len(k) > 0:
-                assert len(k) == 1, k
-                url = author_urls[k[0]]
-                new_auth = f"<a href='{url}' target='_blank'>{new_auth}</a>"
+                if config['name'] in new_auth:
+                    new_auth = "<strong>" + new_auth + "</strong>"
 
-            if config['name'] in new_auth:
-                new_auth = "<strong>" + new_auth + "</strong>"
+            else:
+                new_auth = new_auth.replace(' ', '&nbsp;')
+                if config['name'] in new_auth:
+                    new_auth = "<strong>" + new_auth + "</strong>"
 
-            # if 'zico' in author.lower():
-            #     new_auth = 'J. Z. Kolter'
-            #     if '*' in author:
-            #         new_auth += '*'
-            # else:
-            #     new_auth = author.split(", ")
-            #     new_auth = new_auth[1][0] + ". " + new_auth[0]
-            #     if config['name'] in new_auth:
-            #         new_auth = "<strong>" + new_auth + "</strong>"
             formatted_authors.append(new_auth)
         return formatted_authors
 
@@ -101,11 +97,16 @@ def get_pub_md(context, config):
         if 'link' in pub:
             img_str = "<a href=\'{}\' target='_blank'>{}</a> ".format(
                 pub['link'], img_str)
-            title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
-                pub['link'], title)
+            # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
+                # pub['link'], title)
+            # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
+            #     pub['link'], title)
+            links.append(
+                "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['link'])
+            )
 
-        for base in ['code', 'slides', 'talk']:
-            key = base + 'url'
+        for base in ['code', 'slides', 'talk', 'video', 'project']:
+            key = base + '_url'
             if key in pub:
                 links.append(
                     "[<a href=\'{}\' target='_blank'>{}</a>] ".format(
@@ -133,7 +134,7 @@ def get_pub_md(context, config):
 </td>
 <td>
 {img_str}
-<em>{title}</em> {links}<br>
+{title} {links}<br>
 {author_str}<br>
 {year_venue} {note_str} <br>
 {abstract}
@@ -147,8 +148,8 @@ def get_pub_md(context, config):
 {prefix}{gidx}.
 </td>
 <td>
-    <em>{title}</em> {links}<br>
-    {author_str}<br>
+    {title} {links}<br>
+    <em>{author_str}</em><br>
     {year_venue} {note_str} <br>
     {abstract}
 </td>
@@ -165,88 +166,139 @@ def get_pub_md(context, config):
             pub['author'] = _format_author_list(pub['author'])
         return p
 
-    # if 'categories' in config:
-    #     contents = []
-    #     for category in config['categories']:
-    #         type_content = {}
-    #         type_content['title'] = category['heading']
-
-    #         pubs = load_and_replace(category['file'])
-
-    #         details = ""
-    #         # sep = "<br><br>\n"
-    #         sep = "\n"
-    #         for i, pub in enumerate(pubs):
-    #             details += _get_pub_str(pub, category['prefix'],
-    #                                     i + 1, include_image=False) + sep
-    #         type_content['details'] = details
-    #         type_content['file'] = category['file']
-    #         contents.append(type_content)
-    # else:
 
     include_image = config['include_image']
     sort_bib = config['sort_bib']
     group_by_year = config['group_by_year']
+    group_by_topic = config['group_by_topic']
     prefix_reverse = config['prefix_reverse']
 
-    contents = {}
-    pubs = load_and_replace(config['file'])
-    sep = "\n"
+    if 'categories' in config:
+        contents = []
+        for category in config['categories']:
+            type_content = {}
+            type_content['title'] = category['heading']
+            pubs = load_and_replace(category['file'])
+            if 'prefix' in category:
+                prefix = category['prefix']
+            else:
+                prefix = config['prefix']
 
-    if sort_bib:
-        pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
+            if group_by_topic:
+                all_topics = []
+                for pub in pubs:
+                    if 'topic' in pub.keys():
+                        topic = pub['topic']
+                    else:
+                        topic = ''
+                    pub['topic_lower'] = topic.lower().strip()
+                    all_topics.append(pub['topic_lower'])
 
-    pubs_len = len(pubs)
+                details = ''
+                all_topics = list(set(all_topics))
+                all_topics_pubs = []
+                for topic in all_topics:
+                    topic_pubs = []
+                    for pub in pubs:
+                        if pub['topic_lower'] == topic:
+                            topic_pubs.append(pub)
+                    all_topics_pubs.append({
+                            'topic': topic,
+                            'topic_pubs': topic_pubs
+                        })
 
-    if group_by_year:
-        for pub in pubs:
-            m = re.search('(\d{4})', pub['year'])
-            assert m is not None
-            pub['year_int'] = int(m.group(1))
+                for topic_pubs_item in all_topics_pubs:
+                    topic = topic_pubs_item['topic']
+                    topic_pubs = topic_pubs_item['topic_pubs']
+                    details += f'<h3>{topic.title()}</h3>\n'
+                    details += '<table class="table table-hover">\n'
+                    sep = "\n"
+                    if sort_bib:
+                        topic_pubs = sorted(topic_pubs, key=lambda pub: int(pub['year']), reverse=True)
+                    for i, pub in enumerate(topic_pubs):
+                        details += _get_pub_str(pub, prefix, i + 1, include_image=include_image) + sep
+                    details += '</table>\n'
+            else:
+                details = ""
+                # sep = "<br><br>\n"
+                details += '<table class="table table-hover">\n'
+                sep = "\n"
+                if sort_bib:
+                    pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
+                for i, pub in enumerate(pubs):
+                    details += _get_pub_str(pub, prefix, i + 1, include_image=include_image) + sep
+                details += '</table>\n'
+            type_content['details'] = details
+            type_content['file'] = category['file']
+            contents.append(type_content)
 
-        details = ''
-        # change the pub idx to reverse sequence.
-        
+    # No categories, Render all publication at once.
+    else:
+
+        contents = {}
+        pubs = load_and_replace(config['file'])
+        sep = "\n"
+
+        if sort_bib:
+            pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
+
+        pubs_len = len(pubs)
+
         if prefix_reverse:
             gidx = pubs_len
         else:
             gidx = 1
 
-        for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
-            print_year = year >= 2015
+        if group_by_year:
+            for pub in pubs:
+                m = re.search('(\d{4})', pub['year'])
+                assert m is not None
+                pub['year_int'] = int(m.group(1))
 
-            if print_year:
-                year_str = str(year)
-                if year == 2015:
-                    year_str = "2015 and earlier"
-                details += f'<h2>{year_str}</h2>\n'
-                details += '<table class="table table-hover">\n'
+            details = ''
+            # change the pub idx to reverse sequence.
 
-            for i, pub in enumerate(year_pubs):
-                details += _get_pub_str(
-                    pub, config['prefix'], gidx,
-                    include_image=include_image,
-                ) + sep
+
+
+            for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
+                print_year = year >= 2015
+
+                if print_year:
+                    year_str = str(year)
+                    if year == 2015:
+                        year_str = "2015 and earlier"
+                    details += f'<h2>{year_str}</h2>\n'
+                    details += '<table class="table table-hover">\n'
+
+                for i, pub in enumerate(year_pubs):
+                    details += _get_pub_str(
+                        pub, config['prefix'], gidx,
+                        include_image=include_image,
+                    ) + sep
+                    if prefix_reverse:
+                        gidx -= 1
+                    else:
+                        gidx += 1
+
+                if print_year and year > 2015:
+                    details += '</table>\n'
+
+            if not print_year:
+                details += '</table>\n'
+
+        else:
+            details = '<table class="table table-hover">'
+            for i, pub in enumerate(pubs):
+                details += _get_pub_str(pub, config['prefix'], gidx,
+                        include_image=include_image,
+                    ) + sep
                 if prefix_reverse:
                     gidx -= 1
                 else:
                     gidx += 1
-
-            if print_year and year > 2015:
-                details += '</table>\n'
-
-        if not print_year:
-            details += '</table>\n'
-
-    else:
-        details = '<table class="table table-hover">'
-        for i, pub in enumerate(pubs):
-            details += _get_pub_str(pub, '', i + 1,
-                    include_image=include_image,
-                ) + sep
-        details += '</table>'
-    contents['details'] = details
-    contents['file'] = config['file']
+            details += '</table>'
+        contents['details'] = details
+        contents['file'] = config['file']
 
     return contents
 
@@ -378,7 +430,17 @@ def get_pub_latex(context, config):
                     gidx += 1
 
     else:
-        assert False
+        details = ''
+        if prefix_reverse:
+            gidx = len_pubs
+        else:
+            gidx = 1
+        for i, pub in enumerate(pubs):
+            details += _get_pub_str(pub, config['prefix'], gidx) + sep
+            if prefix_reverse:
+                gidx -= 1
+            else:
+                gidx += 1
     contents['details'] = details
     contents['file'] = config['file']
 
