@@ -130,7 +130,7 @@ def get_pub_md(context, config):
             return f'''
 <tr id="tr-{pub['ID']}" {tr_style}>
 <td align='right' style='padding-left:0;padding-right:0;'>
-[{prefix}{gidx}] 
+[{prefix}{gidx}]
 </td>
 <td>
 {img_str}
@@ -145,7 +145,7 @@ def get_pub_md(context, config):
             return f'''
 <tr id="tr-{pub['ID']}" {tr_style}>
 <td align='right'>
-{prefix}{gidx}.
+[{prefix}{gidx}]
 </td>
 <td>
     {title} {links}<br>
