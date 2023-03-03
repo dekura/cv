@@ -21,7 +21,8 @@ order:
   - [education, Education]
   # - [positions, Previous Positions]
   # - [honors, Honors \& Awards]
-  - [all_publications, Publications]
+  # - [all_publications, Publications]
+  - [categories_publications, Publications]
   # - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
@@ -78,29 +79,23 @@ positions:
     title: Research Intern
     # inline_detail: "with \\href{http://zicokolter.com}{J. Zico Kolter} on ML and optimization"
     dates: 2018 -- 2019
-  # - place: Intel Labs
-  #   location: Santa Clara
-  #   title: Research Intern
-  #   dates: 2018
-  #   inline_detail: "with \\href{http://vladlen.info/}{Vladlen Koltun} on computer vision"
-  # - place: Google DeepMind
-  #   location: London
-  #   title: Research Intern
-  #   dates: 2017
-  #   inline_detail: "with \\href{https://scholar.google.com/citations?user=nzEluBwAAAAJ}{Nando de Freitas} and \\href{http://mdenil.com/}{Misha Denil} on RL"
-  # - place: Carnegie Mellon University
-  #   title: Research Assistant
-  #   inline_detail: "with \\href{https://www.cs.cmu.edu/~satya/}{Mahadev Satyanarayanan} on mobile systems"
-  #   dates: 2014 -- 2016
 
-
-all_publications:
-  name: "Guojin Chen"
+categories_publications:
+  name: "All publications"
   file: all.bib
+  categories:
+    -
+      heading: "Conference"
+      file: all.bib
+      prefix: 'C'
+    -
+      heading: "Journal"
+      file: journal.bib
+      prefix: 'J'
+  group_by_topic: False
   sort_bib: True
   include_image: False
   group_by_year: False
-  group_by_topic: False
   prefix: 'C'
   prefix_reverse: True
   show_author_url: True
@@ -127,6 +122,43 @@ all_publications:
     'Yunheng Shen' : 'https://shiningsord.github.io/'
     'Yang Bai' : 'https://ybai62868.github.io/'
     'Farzan Farnia' : 'https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/'
+
+
+
+
+# all_publications:
+#   name: "Guojin Chen"
+#   file: all.bib
+#   sort_bib: True
+#   include_image: False
+#   group_by_year: False
+#   group_by_topic: False
+#   prefix: 'C'
+#   prefix_reverse: True
+#   show_author_url: True
+#   author_urls:
+#     'Wanli Chen' : 'https://cwanli.github.io/'
+#     'Yuzhe Ma' : 'https://yuzhe630.github.io/'
+#     'Haoyu Yang' : 'https://phdyang007.github.io/'
+#     'Bei Yu' : 'https://www.cse.cuhk.edu.hk/~byu/'
+#     'Ziyang Yu' : 'https://scarecrowyu.github.io/'
+#     'Martin Wong' : 'https://scholar.google.com/citations?user=WPhoQiUAAAAJ'
+#     'Xinge Zhu' : 'https://xingezhu.me/'
+#     'Ran Chen' : 'https://appsrv.cse.cuhk.edu.hk/~rchen/'
+#     'Wei Li' : 'https://wadmes.github.io/cv/'
+#     'Wenqian Zhao' : 'https://wenqian1228.github.io/'
+#     'Xufeng Yao' : 'https://appsrv.cse.cuhk.edu.hk/~xfyao/'
+#     'Chunjing Xu' : 'https://scholar.google.com/citations?user=-CJ5LkMAAAAJ'
+#     'Yi Zhu' : 'https://yeezhu.github.io/'
+#     'Lei Ye' : 'https://noahlab.com.hk/'
+#     'Liangjian Wen' : 'https://scholar.google.com/citations?user=jwHflLcAAAAJ'
+#     'Jianzhuang Liu' : 'https://scholar.google.com/citations?user=sKauaAwAAAAJ'
+#     'Hongduo Liu' : 'https://liuhongduosc.github.io/'
+#     'Zehua Pei' : 'https://scholar.google.com/citations?user=FjZurHkAAAAJ'
+#     'Zixiao Wang' : 'https://shiningsord.github.io/'
+#     'Yunheng Shen' : 'https://shiningsord.github.io/'
+#     'Yang Bai' : 'https://ybai62868.github.io/'
+#     'Farzan Farnia' : 'https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/'
 
 
 

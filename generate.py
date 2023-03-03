@@ -184,6 +184,13 @@ def get_pub_md(context, config):
             else:
                 prefix = config['prefix']
 
+
+            pubs_len = len(pubs)
+            if prefix_reverse:
+                gidx = pubs_len
+            else:
+                gidx = 1
+
             if group_by_topic:
                 all_topics = []
                 for pub in pubs:
@@ -226,7 +233,11 @@ def get_pub_md(context, config):
                 if sort_bib:
                     pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
                 for i, pub in enumerate(pubs):
-                    details += _get_pub_str(pub, prefix, i + 1, include_image=include_image) + sep
+                    details += _get_pub_str(pub, prefix, gidx, include_image=include_image) + sep
+                    if prefix_reverse:
+                        gidx -= 1
+                    else:
+                        gidx += 1
                 details += '</table>\n'
             type_content['details'] = details
             type_content['file'] = category['file']
