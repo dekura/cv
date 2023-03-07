@@ -32,12 +32,10 @@ order:
 
 about: |
   <p align='justify'>
-  Hi, I am now a Ph.D. student at The Chinese University of Hong Kong
-  (<b>CUHK-CSE</b>) advised by Prof. \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}.
-  My research interests include (1) <b>Machine Learning in VLSI Design for Manufacturability</b>, (2) <b>computer vision</b>.
-  I did some work focusing on computational lithography and mask optimization.
-  Now, I am also looking for academic visit or research interns.
-  My open source contributions can be found on my \href{https://github.com/dekura}{github profile}.
+  Hi, there! I am currently a Ph.D. student at The Chinese University of Hong Kong (<b>CUHK-CSE</b>) under the guidance of Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}.
+  My current research is focused on computational lithography and mask optimization.
+  Additionally, my research interests include (1) <b>machine learning in VLSI design for manufacturability</b> and (2) <b>physics-informed networks for solving EDA area problems</b>.
+  I am also currently seeking academic visit or research intern opportunities.
   </p>
   <p align='justify'>
   I'm also maintaining a curated list of AI for EDA papers. Check it out here: \href{https://ai4eda.github.io}{Awesome AI for EDA}.
