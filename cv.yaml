@@ -26,7 +26,7 @@ order:
   # - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
-  # - [service, Professional Activities]
+  - [service, Professional Activities]
   - [teaching, Teaching]
   # - [skills, Skills]
 
@@ -216,16 +216,18 @@ advising:
     url: https://phillipkwang.com/
 
 service:
-  reviewing:
-    - "AAAI Conference on Artificial Intelligence"
-    - "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)"
-
+  # reviewing:
+  #   - "Design Automation Conference (DAC)"
+  #   - "AAAI Conference on Artificial Intelligence"
+  #   - "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)"
   main:
-    - details: AAAI Senior Program Committee
+    - details: Design Automation Conference (DAC)
       year: 2023
-    - details: NeurIPS Learning Meets Combinatorial Optimization Workshop Organizer
-      year: 2020
-      url: https://sites.google.com/view/lmca2020/home
+    - details: AAAI Conference on Artificial Intelligence (AAAI)
+      year: 2022
+    - details: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
+      year: 2022-2023
+
 
 
 skills:

@@ -1,9 +1,7 @@
 {% extends "section.md" %}
 
 {% block body %}
-
-### <i class="fa fa-chevron-right"></i> Paper Review / External Review
-
+### Paper Review / External Review
 <table class="table table-hover">
 {% for item in items.main %}
 <tr>
@@ -22,5 +20,12 @@
 {% endfor %}
 </table>
 
-
+### Reviewing
+<table class="table table-hover">
+{% for item in items.reviewing %}
+<tr>
+  <td style='padding-right:0;'>{{ item }}</td>
+</tr>
+{% endfor %}
+</table>
 {% endblock body %}
