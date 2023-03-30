@@ -18,7 +18,7 @@ color2: '0.25,0.25,0.25' # Make the font under the name a darker grey.
 order:
   - [about, NONE]
   # - [current_position, Current Position]
-  - [education, Education]
+  # - [education, Education]
   # - [positions, Previous Positions]
   # - [honors, Honors \& Awards]
   # - [all_publications, Publications]
@@ -121,6 +121,10 @@ categories_publications:
     'Yang Bai' : 'https://ybai62868.github.io/'
     'Farzan Farnia' : 'https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/'
     'Qi Sun' : 'https://scholar.google.com/citations?user=4OnODOAAAAAJ'
+    'Su Zheng' : 'https://shelljane.github.io/'
+    'Binwu Zhu' : 'https://kins1ley.github.io/'
+    'Shuo Yin' : 'https://sawydust1228.github.io/'
+
 
 
 
