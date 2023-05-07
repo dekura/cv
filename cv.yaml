@@ -32,13 +32,17 @@ order:
 
 about: |
   <p align='justify'>
-  Hi, there! I am currently a Ph.D. student at The Chinese University of Hong Kong (<b>CUHK-CSE</b>) under the guidance of Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}.
-  My current research is focused on computational lithography and mask optimization.
-  Additionally, my research interests include (1) <b>machine learning in VLSI design for manufacturability</b> and (2) <b>physics-informed networks for solving EDA area problems</b>.
-  I am also currently seeking academic visit or research intern opportunities.
+  Greetings! I'm a Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE),
+  where I'm fortunate to work under the guidance of Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor  \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
+  My primary research area revolves around <b>computational lithography</b> and <b>mask optimization</b>, which involves developing algorithms to enhance the manufacturing process of integrated circuits.
+  I'm also interested in exploring (1) the potential of <b>deep learning in VLSI design</b> and (2) <b>utilizing physics-informed networks to tackle EDA area problems</b>.
+
+  Furthermore, I'm actively seeking opportunities to broaden my research experience by embarking on academic visits or research internships.
+  I'm enthusiastic about collaborating with experts in the field and contributing to innovative projects.
+  Please feel free to contact me if you have any suggestions or potential collaborations in mind.
   </p>
   <p align='justify'>
-  I'm also maintaining a curated list of AI for EDA papers. Check it out here: \href{https://ai4eda.github.io}{Awesome AI for EDA}.
+  I'm also maintaining a curated list of <b>AI for EDA</b> papers. Check it out here: \href{https://ai4eda.github.io}{Awesome AI for EDA}.
   The list is under construction and you are welcomed to submit your publications follow \href{https://ai4eda.github.io/about/}{the instructions}.
   </p><br>
 
