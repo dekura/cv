@@ -26,7 +26,7 @@ order:
   # - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
-  # - [service, Professional Activities]
+  - [service, Professional Activities]
   - [teaching, Teaching]
   # - [skills, Skills]
 
@@ -34,9 +34,17 @@ about: |
   <p align='justify'>
   Greetings! I'm a Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE),
   where I'm fortunate to work under the guidance of Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor  \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
-  My primary research area revolves around design for manufacturing.
-  </p>
+  My primary research area revolves around <b>computational lithography</b> and <b>mask optimization</b>, which involves developing algorithms to enhance the manufacturing process of integrated circuits.
+  I'm also interested in exploring (1) the potential of <b>deep learning in VLSI design</b> and (2) <b>utilizing physics-informed networks to tackle EDA area problems</b>.
 
+  Furthermore, I'm actively seeking opportunities to broaden my research experience by embarking on academic visits or research internships.
+  I'm enthusiastic about collaborating with experts in the field and contributing to innovative projects.
+  Please feel free to contact me if you have any suggestions or potential collaborations in mind.
+  </p>
+  <p align='justify'>
+  I'm also maintaining a curated list of <b>AI for EDA</b> papers. Check it out here: \href{https://ai4eda.github.io}{Awesome AI for EDA}.
+  The list is under construction and you are welcomed to submit your publications follow \href{https://ai4eda.github.io/about/}{the instructions}.
+  </p><br>
 
 current_position:
   - place: CUHK
