@@ -88,6 +88,10 @@ def get_pub_md(context, config):
         highlight = 'selected' in pub and pub['selected'].lower() == 'true'
         img_str = f'<img src="images/publications/{pub["ID"]}.png" onerror="this.style.display=\'none\'" class="publicationImg" />'
         links = []
+        # add bibtex download for all
+        links.append("""
+[<a href="/data/bibtex/all.bib" download="gjchen.bib">bibtex</a>]
+""")
         abstract = ''
         if 'abstract' in pub:
             links.append("""
