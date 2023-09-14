@@ -162,7 +162,8 @@ def get_pub_md(context, config):
 
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
-            p = BibTexParser(f.read(), bc.author).get_entry_list()
+            # p = BibTexParser(f.read(), bc.author).get_entry_list()
+            p = BibTexParser(f.read()).get_entry_list()
         for pub in p:
             for field in pub:
                 if field != 'link':
@@ -395,7 +396,8 @@ def get_pub_latex(context, config):
 
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
-            p = BibTexParser(f.read(), bc.author).get_entry_list()
+            # p = BibTexParser(f.read(), bc.author).get_entry_list()
+            p = BibTexParser(f.read()).get_entry_list()
         for pub in p:
             for field in pub:
                 if field != 'link':
@@ -707,7 +709,7 @@ def main():
     yaml_data = {}
     for yaml_file in args.yamls:
         with open(yaml_file) as f:
-            yaml_data.update(yaml.load(f))
+            yaml_data.update(yaml.load(f, Loader=yaml.Loader))
 
     if args.latex or args.markdown:
         if args.latex:
