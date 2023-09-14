@@ -20,6 +20,7 @@ import shelve
 from scholarly import scholarly
 import bibtexparser.customization as bc
 from bibtexparser.bparser import BibTexParser
+import bibtexparser
 from datetime import date
 from itertools import groupby
 from jinja2 import Environment, FileSystemLoader
@@ -163,7 +164,11 @@ def get_pub_md(context, config):
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
             # p = BibTexParser(f.read(), bc.author).get_entry_list()
-            p = BibTexParser(f.read()).get_entry_list()
+            # p = BibTexParser(f.read()).get_entry_list()
+            parser = BibTexParser()
+            parser.customization = bc.author
+            p = bibtexparser.loads(f.read(), parser).entries
+            # print(p)
         for pub in p:
             for field in pub:
                 if field != 'link':
@@ -397,7 +402,10 @@ def get_pub_latex(context, config):
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
             # p = BibTexParser(f.read(), bc.author).get_entry_list()
-            p = BibTexParser(f.read()).get_entry_list()
+            # p = BibTexParser(f.read()).get_entry_list()
+            parser = BibTexParser()
+            parser.customization = bc.author
+            p = bibtexparser.loads(f.read(), parser).entries
         for pub in p:
             for field in pub:
                 if field != 'link':
