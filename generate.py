@@ -163,12 +163,10 @@ def get_pub_md(context, config):
 
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
-            # p = BibTexParser(f.read(), bc.author).get_entry_list()
-            # p = BibTexParser(f.read()).get_entry_list()
+            # after bibtexparser 1.4
             parser = BibTexParser()
             parser.customization = bc.author
             p = bibtexparser.loads(f.read(), parser).entries
-            # print(p)
         for pub in p:
             for field in pub:
                 if field != 'link':
@@ -392,17 +390,15 @@ def get_pub_latex(context, config):
             note_str = ''
         return rf'''
 \begin{{minipage}}{{\textwidth}}
-\begin{{tabular}}[t]{{p{{8mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
-{highlight_color} \hfill [{prefix}{gidx}] && \textit{{{title}}} {links} \\
+\begin{{tabular}}[t]{{p{{10mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
+{highlight_color} \hfill [{prefix}{gidx}] && {title} {links} \\
 {highlight_color} && {author_str} \\
 {highlight_color} && {year_venue} {note_str} \\
-\end{{tabular}} \\
+\end{{tabular}} \\[1mm]
 \end{{minipage}}'''
 
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
-            # p = BibTexParser(f.read(), bc.author).get_entry_list()
-            # p = BibTexParser(f.read()).get_entry_list()
             parser = BibTexParser()
             parser.customization = bc.author
             p = bibtexparser.loads(f.read(), parser).entries
