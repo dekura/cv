@@ -19,6 +19,7 @@ order:
   - [about, NONE]
   - [current_position, Current Position]
   - [education, Education]
+  - [research_interests, Research Interests]
   # - [positions, Previous Positions]
   # - [honors, Honors \& Awards]
   # - [all_publications, Publications]
@@ -52,32 +53,42 @@ about: |
   The list is under construction and you are welcomed to submit your publications follow \href{https://ai4eda.github.io/about/}{the instructions}.
   </p><br>
 
+
+research_interests:
+  - Design for manufacturing (DFM) / Electronic design automation (EDA)
+  - Computational lithography / Resolution enhancement technologies
+  - Deep Learning for VLSI / Physics-informed deep learning
+
 current_position:
   - place: UT Austin
     location: Austin, Texas
     title: Visiting Student
     dates: 2023.08 -- Present
+  - place: The Chinese University of Hong Kong
+    # location: Shatin, Hong Kong
+    title: Ph.D. Candidate
+    dates: 2021.08 -- Present
 
 education:
   - school: The Chinese University of Hong Kong
     location: Hong Kong, China
     degree: Ph.D. in Computer Science
     dates: 2021 -- Present
-    # details:
-    #   - "Advisor : \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
-  # - school: The Chinese University of Hong Kong
-  #   location: Hong Kong, China
-  #   degree: M.S. in Computer Science
-  #   dates: 2019 -- 2020
+    details:
+      - "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+  - school: The Chinese University of Hong Kong
+    location: Hong Kong, China
+    degree: M.S. in Computer Science
+    dates: 2019 -- 2020
     # details:
     #   - "Thesis: \\textit{\\href{https://github.com/bamos/thesis}{Differentiable Optimization-Based Modeling for Machine Learning}}"
     #   - "Advisor: \\href{http://zicokolter.com}{J. Zico Kolter}"
-  # - school: Huazhong University of Science and Technology
-  #   location: Wuhan, China
-  #   degree: B.S. in Computer Science
-  #   dates: 2015 -- 2019
+  - school: Huazhong University of Science and Technology
+    location: Wuhan, China
+    degree: B.S. in Computer Science
+    dates: 2015 -- 2019
     # overallGPA: 3.99/4.00
-    # majorGPA: 4.00/4.00
+
 # - school: Northside High School
 #   location: Roanoke, VA
 #   dates: 2011
@@ -89,7 +100,7 @@ positions:
     dates: 2018 -- 2019
 
 categories_publications:
-  name: "All publications"
+  name: "Guojin Chen"
   file: all.bib
   categories:
     -
