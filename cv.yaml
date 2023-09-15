@@ -64,18 +64,22 @@ current_position:
     location: Austin, Texas
     title: Visiting Student
     dates: 2023.08 -- Present
+    # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
+    details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
   - place: The Chinese University of Hong Kong
     # location: Shatin, Hong Kong
     title: Ph.D. Candidate
     dates: 2021.08 -- Present
+    # inline_detail: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+    details: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
 
 education:
   - school: The Chinese University of Hong Kong
     location: Hong Kong, China
     degree: Ph.D. in Computer Science
     dates: 2021 -- Present
-    details:
-      - "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+    # details:
+      # - "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
   - school: The Chinese University of Hong Kong
     location: Hong Kong, China
     degree: M.S. in Computer Science

@@ -13,6 +13,11 @@
     ~< if item.inline_detail >~
     {\footnotesize \color{gray} (<< item.inline_detail >>)}
     ~< endif >~
-    \hfill << item.dates >> \par \vspace{1mm}
+    \hfill << item.dates >> \\
+    ~< if item.details >~
+    {\small <<item.details>>} \par
+    ~< endif >~
+    \vspace{2mm}
 ~< endfor >~
+\vspace{-4mm}
 ~< endblock body >~
