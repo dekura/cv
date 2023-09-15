@@ -11,7 +11,7 @@
 
 
 Representative publications that I am a primary author on are
-\colorbox{tab_highlight}{highlighted.} \vspace{3mm}
+\colorbox{tab_highlight}{highlighted.}
 % [\href{https://github.com/bamos/cv/blob/master/publications/<< content.file >>}{BibTeX}]
 
 % [<a href="https://scholar.google.com/citations?user={{ scholar_id }}">Google Scholar</a>]
@@ -23,7 +23,8 @@ Representative publications that I am a primary author on are
 % \nocite{*}
 % \printbibliography[heading=none]
 % \end{refsection}
-
-<< content.details >>
-
+~< for type_content in content>~
+  \subsection{<<type_content.title>>}
+  << type_content.details >>
+~< endfor >~
 ~< endblock body >~

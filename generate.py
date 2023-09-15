@@ -369,6 +369,13 @@ def get_pub_latex(context, config):
         title = title.replace("\n", " ")
         if 'link' in pub:
             title = r"\href{{{}}}{{{}}} ".format(pub['link'], title)
+        
+        # conference and journal
+        if 'booktitle' in pub:
+            booktitle = pub['booktitle']
+        elif 'journal' in pub:
+            booktitle = pub['journal']
+        assert(booktitle is not None)
 
         assert('_venue' in pub and 'year' in pub)
         year_venue = "{} {}".format(pub['_venue'], pub['year'])
@@ -393,7 +400,7 @@ def get_pub_latex(context, config):
 \begin{{tabular}}[t]{{p{{10mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
 {highlight_color} \hfill [{prefix}{gidx}] && {title} {links} \\
 {highlight_color} && {author_str} \\
-{highlight_color} && {year_venue} {note_str} \\
+{highlight_color} && \textit{{{booktitle}}} (\textbf{{{year_venue}}}) {note_str} \\
 \end{{tabular}} \\[1mm]
 \end{{minipage}}'''
 
@@ -409,61 +416,119 @@ def get_pub_latex(context, config):
             pub['author'] = _format_author_list(pub['author'])
         return p
 
+
+    include_image = config['include_image']
     sort_bib = config['sort_bib']
     group_by_year = config['group_by_year']
+    group_by_topic = False
     prefix_reverse = config['prefix_reverse']
 
-    contents = {}
-    pubs = load_and_replace(config['file'])
-    sep = "\n"
 
-    if sort_bib:
-        pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
+    if 'categories' in config:
+        contents = []
+        for category in config['categories']:
+            type_content = {}
+            type_content['title'] = category['heading']
+            pubs = load_and_replace(category['file'])
+            sep = "\n"
 
-    len_pubs = len(pubs)
+            if 'prefix' in category:
+                prefix = category['prefix']
+            else:
+                prefix = config['prefix']
 
-    if group_by_year:
-        for pub in pubs:
-            m = re.search('(\d{4})', pub['year'])
-            assert m is not None
-            pub['year_int'] = int(m.group(1))
+            if sort_bib:
+                pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
 
-        details = ''
 
-        if prefix_reverse:
-            gidx = len_pubs
+            pubs_len = len(pubs)
+            if prefix_reverse:
+                gidx = pubs_len
+            else:
+                gidx = 1
+
+            if group_by_year:
+                for pub in pubs:
+                    m = re.search('(\d{4})', pub['year'])
+                    assert m is not None
+                    pub['year_int'] = int(m.group(1))
+
+                details = ''
+
+                for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
+                    year_str = str(year)
+                    details += rf'\subsection{{{year_str}}}' + '\n'
+
+                    for i, pub in enumerate(year_pubs):
+                        details += _get_pub_str(pub, prefix, gidx) + sep
+                        if prefix_reverse:
+                            gidx -= 1
+                        else:
+                            gidx += 1
+            else:
+                details = ''
+                for i, pub in enumerate(pubs):
+                    details += _get_pub_str(pub, prefix, gidx) + sep
+                    if prefix_reverse:
+                        gidx -= 1
+                    else:
+                        gidx += 1
+            type_content['details'] = details
+            type_content['file'] = category['file']
+            contents.append(type_content)
+    # No categories, Render all publication at once.
+    else:
+        contents = {}
+        pubs = load_and_replace(config['file'])
+        sep = "\n"
+
+        if sort_bib:
+            pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
+
+        len_pubs = len(pubs)
+
+        if group_by_year:
+            for pub in pubs:
+                m = re.search('(\d{4})', pub['year'])
+                assert m is not None
+                pub['year_int'] = int(m.group(1))
+
+            details = ''
+
+            if prefix_reverse:
+                gidx = len_pubs
+            else:
+                gidx = 1
+
+            for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
+                print_year = year >= 2015
+                if print_year:
+                    year_str = str(year)
+                    if year == 2015:
+                        year_str = "2015 and earlier"
+                    details += rf'\subsection{{{year_str}}}' + '\n'
+
+                for i, pub in enumerate(year_pubs):
+                    details += _get_pub_str(pub, config['prefix'], gidx) + sep
+                    if prefix_reverse:
+                        gidx -= 1
+                    else:
+                        gidx += 1
+
         else:
-            gidx = 1
-
-        for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
-            print_year = year >= 2015
-            if print_year:
-                year_str = str(year)
-                if year == 2015:
-                    year_str = "2015 and earlier"
-                details += rf'\subsection{{{year_str}}}' + '\n'
-
-            for i, pub in enumerate(year_pubs):
+            details = ''
+            if prefix_reverse:
+                gidx = len_pubs
+            else:
+                gidx = 1
+            for i, pub in enumerate(pubs):
                 details += _get_pub_str(pub, config['prefix'], gidx) + sep
                 if prefix_reverse:
                     gidx -= 1
                 else:
                     gidx += 1
-
-    else:
-        details = ''
-        if prefix_reverse:
-            gidx = len_pubs
-        else:
-            gidx = 1
-        for i, pub in enumerate(pubs):
-            details += _get_pub_str(pub, config['prefix'], gidx) + sep
-            if prefix_reverse:
-                gidx -= 1
-            else:
-                gidx += 1
-    contents['details'] = details
-    contents['file'] = config['file']
+        contents['details'] = details
+        contents['file'] = config['file']
 
     return contents
 
@@ -583,17 +648,20 @@ class RenderContext(object):
                 section_template_name = os.path.join(self.SECTIONS_DIR, 'news.md')
                 section_data['items'] = section_content
             elif section_tag == 'repos':
+                if self._context_name == 'markdown':
+                    continue
                 add_repo_data(self, section_content)
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
-            elif section_tag in ['current_position', 'research_interests']:
+            # won't show on website
+            elif section_tag in ['current_position', 'research_interests', 'education',]:
                 if self._context_name == 'markdown':
                     continue
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
-            elif section_tag in ['coursework', 'education', 'honors',
+            elif section_tag in ['coursework', 'honors',
                                  'positions', 'research', 'skills', 'service',
                                  'teaching', 'talks', 'advising']:
                 section_data['items'] = section_content

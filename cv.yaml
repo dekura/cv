@@ -24,7 +24,7 @@ order:
   # - [honors, Honors \& Awards]
   # - [all_publications, Publications]
   - [categories_publications, Publications]
-  # - [repos, Open Source Repositories]
+  - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
   - [service, Professional Activities]
@@ -104,11 +104,11 @@ categories_publications:
   file: all.bib
   categories:
     -
-      heading: "Conference"
+      heading: "Conference papers"
       file: all.bib
       prefix: 'C'
     -
-      heading: "Journal"
+      heading: "Journal papers"
       file: journal.bib
       prefix: 'J'
   group_by_topic: False
@@ -193,16 +193,9 @@ categories_publications:
 
 
 repos:
-  - repo_url: https://github.com/facebookresearch/amortized-optimization-tutorial
-    year: 2022
-    desc: Tutorial on amortized optimization
-  - repo_url: https://github.com/facebookresearch/theseus
-    year: 2022
-    desc: Differentiable non-linear optimization library
-  - repo_url: https://github.com/facebookresearch/meta-ot
-    year: 2022
-    desc: Meta Optimal Transport
-
+  - repo_url: https://github.com/OpenOPC/OpenILT
+    year: 2023
+    desc: Open-source inverse lithography technology (ILT) framework
 
 talks:
   - year: 2022
@@ -251,9 +244,9 @@ service:
     - "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)"
   main:
     - details: Design Automation Conference (DAC)
-      year: 2023
+      year: 2021-2023
     - details: AAAI Conference on Artificial Intelligence (AAAI)
-      year: 2022
+      year: 2022-2023
     - details: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
       year: 2022-2023
 
