@@ -78,9 +78,6 @@ def get_pub_md(context, config):
         # if title[-1] not in ("?", ".", "!"):
         #    title += ","
         # title = '"{}"'.format(title)
-        # if 'link' in pub:
-        #     title = "<a href=\'{}\'>{}</a>".format(
-        #         pub['link'], title)
         title = title.replace("\n", " ")
 
         assert('_venue' in pub and 'year' in pub)
@@ -99,15 +96,13 @@ def get_pub_md(context, config):
 [<a href='javascript:;'
     onclick=\'$(\"#abs_{}{}\").toggle()\'>abs</a>]""".format(pub['ID'], prefix))
             abstract = context.make_replacements(pub['abstract'])
-        if 'link' in pub:
+        if 'url' in pub:
             img_str = "<a href=\'{}\' target='_blank'>{}</a> ".format(
-                pub['link'], img_str)
-            # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
-                # pub['link'], title)
+                pub['url'], img_str)
             # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
             #     pub['link'], title)
             links.append(
-                "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['link'])
+                "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['url'])
             )
 
         for base in ['code', 'slides', 'talk', 'video', 'project']:
@@ -169,7 +164,7 @@ def get_pub_md(context, config):
             p = bibtexparser.loads(f.read(), parser).entries
         for pub in p:
             for field in pub:
-                if field != 'link':
+                if field != 'url':
                     pub[field] = context.make_replacements(pub[field])
             pub['author'] = _format_author_list(pub['author'])
         return p
@@ -363,12 +358,9 @@ def get_pub_latex(context, config):
         # if title[-1] not in ("?", ".", "!"):
         #    title += ","
         # title = '"{}"'.format(title)
-        # if 'link' in pub:
-        #     title = "<a href=\'{}\'>{}</a>".format(
-        #         pub['link'], title)
         title = title.replace("\n", " ")
-        if 'link' in pub:
-            title = r"\href{{{}}}{{{}}} ".format(pub['link'], title)
+        if 'url' in pub:
+            title = r"\href{{{}}}{{{}}} ".format(pub['url'], title)
         
         # conference and journal
         if 'booktitle' in pub:
@@ -411,7 +403,7 @@ def get_pub_latex(context, config):
             p = bibtexparser.loads(f.read(), parser).entries
         for pub in p:
             for field in pub:
-                if field != 'link':
+                if field != 'url':
                     pub[field] = context.make_replacements(pub[field])
             pub['author'] = _format_author_list(pub['author'])
         return p
