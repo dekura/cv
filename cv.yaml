@@ -20,13 +20,13 @@ order:
   - [current_position, Current Position]
   - [education, Education]
   - [research_interests, Research Interests]
-  # - [positions, Previous Positions]
-  # - [honors, Honors \& Awards]
   # - [all_publications, Publications]
   - [categories_publications, Publications]
   - [repos, Open Source Repositories]
+  - [positions, Experiences]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
+  - [honors, Awards]
   - [service, Professional Activities]
   - [teaching, Teaching]
   # - [skills, Skills]
@@ -98,6 +98,9 @@ education:
 #   dates: 2011
 
 positions:
+  - place: The Chinese University of Hong Kong
+    title: Research Assistant
+    dates: 2020 -- 2021
   - place: Tencent
     title: Research Intern
     # inline_detail: "with \\href{http://zicokolter.com}{J. Zico Kolter} on ML and optimization"
@@ -193,7 +196,16 @@ categories_publications:
 #     'Yang Bai' : 'https://ybai62868.github.io/'
 #     'Farzan Farnia' : 'https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/'
 
-
+honors:
+  - title: Ph.D. Studentship
+    year: 2021 -- 2025
+    descr: |
+      By Chinese University of Hong Kong, 2021-2025
+    url: https://neurips.cc/Conferences/2022/ProgramCommittee
+  - title: Outstanding Graduate
+    year: 2019
+    descr: |
+      By Huazhong University of Science and Technology
 
 
 
@@ -201,6 +213,9 @@ repos:
   - repo_url: https://github.com/OpenOPC/OpenILT
     year: 2023
     desc: Open-source inverse lithography technology (ILT) framework
+  - repo_url: https://github.com/ai4eda/awesome-AI4EDA
+    year: 2023
+    desc: A curated paper list of existing AI for EDA studies.
 
 talks:
   - year: 2022
