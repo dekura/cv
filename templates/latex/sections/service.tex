@@ -1,7 +1,7 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
- \subsection{Paper Review / External Review}
+\subsection{Paper Review / External Review}
   ~< for item in items.main >~
     ~< if item.url >~
       \href{<< item.url >>}{<< item.details>>}
@@ -10,7 +10,7 @@
     ~< endif >~
     \hfill << item.year >> \\
 ~< endfor >~
-
+\vspace{-3mm}
 % \subsection{Reviewing}
 % ~< for item in items.reviewing >~
 % << item >> \\

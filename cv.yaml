@@ -21,12 +21,14 @@ order:
   - [education, Education]
   - [research_interests, Research Interests]
   # - [all_publications, Publications]
+  # - [news, News]
   - [categories_publications, Publications]
   - [repos, Open Source Repositories]
   - [positions, Experiences]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
   - [honors, Awards]
+  - [projs, Ongoing Projects]
   - [service, Professional Activities]
   - [teaching, Teaching]
   # - [skills, Skills]
@@ -96,6 +98,11 @@ education:
 # - school: Northside High School
 #   location: Roanoke, VA
 #   dates: 2011
+news:
+  - date: Aug. 01, 2023
+    info: Coming to Austin.
+  - date: Jul. 2023
+    info: Attending DAC conference.
 
 positions:
   - place: The Chinese University of Hong Kong
@@ -207,6 +214,11 @@ honors:
     descr: |
       By Huazhong University of Science and Technology
 
+projs:
+  - title: Source mask co-optimization from bilevel optimization perspective.
+    descr: Traditional SMO is hindered by slow, sequential and alternating optimizations without assured outcomes. I've redeveloped it using bilevel optimization and gradient-based methods, providing global perspective through upper-lower level gradient fusion for enhanced performance.
+  - title: Differentiable Computational Lithography.
+    descr: Revamping lithography with a GPU-accelerated, differentiable workflow based on Abbe imaging, using automatic differentiation to target diverse resolution enhancement objectives.
 
 
 repos:

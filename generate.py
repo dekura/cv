@@ -361,7 +361,7 @@ def get_pub_latex(context, config):
         title = title.replace("\n", " ")
         if 'url' in pub:
             title = r"\href{{{}}}{{{}}} ".format(pub['url'], title)
-        
+
         # conference and journal
         if 'booktitle' in pub:
             booktitle = pub['booktitle']
@@ -392,7 +392,7 @@ def get_pub_latex(context, config):
 \begin{{tabular}}[t]{{p{{10mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
 {highlight_color} \hfill [{prefix}{gidx}] && {title} {links} \\
 {highlight_color} && {author_str} \\
-{highlight_color} && \textit{{{booktitle}}} (\textbf{{{year_venue}}}) {note_str} \\
+{highlight_color} && (\textbf{{{year_venue}}}) \textit{{{booktitle}}}  \textcolor{{note_highlight}}{{{note_str}}} \\
 \end{{tabular}} \\[1mm]
 \end{{minipage}}'''
 
@@ -634,11 +634,13 @@ class RenderContext(object):
                     continue
                 section_template_name = "section" + self._file_ending
                 section_data['data'] = section_content
-            elif section_tag == 'news':
+            elif section_tag in ['news', 'teaching']:
                 if self._file_ending == '.tex':
                     continue
-                section_template_name = os.path.join(self.SECTIONS_DIR, 'news.md')
                 section_data['items'] = section_content
+                section_template_name = os.path.join(
+                    self.SECTIONS_DIR, section_tag + self._file_ending)
+                # section_template_name = os.path.join(self.SECTIONS_DIR, 'news.md')
             elif section_tag == 'repos':
                 if self._context_name == 'markdown':
                     continue
@@ -647,15 +649,15 @@ class RenderContext(object):
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
             # won't show on website
-            elif section_tag in ['current_position', 'research_interests', 'education',]:
+            elif section_tag in ['current_position', 'research_interests', 'education', 'projs', 'positions', 'honors']:
                 if self._context_name == 'markdown':
                     continue
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
-            elif section_tag in ['coursework', 'honors',
-                                 'positions', 'research', 'skills', 'service',
-                                 'teaching', 'talks', 'advising']:
+            elif section_tag in ['coursework',
+                                'research', 'skills', 'service',
+                                'talks', 'advising']:
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)

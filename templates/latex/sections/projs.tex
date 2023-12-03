@@ -1,0 +1,15 @@
+~< extends "section.tex" >~
+
+~< block body >~
+% \begin{itemize}
+~< for proj in items >~
+  << proj.title >>
+  ~< if proj.descr >~
+    {\color{gray}{<< proj.descr >>} \\}
+  ~< else >~
+    \\[2mm]
+  ~< endif >~
+~< endfor >~
+% \end{itemize}
+\vspace{-3mm}
+~< endblock body >~
