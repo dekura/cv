@@ -215,8 +215,8 @@ honors:
       By Huazhong University of Science and Technology
 
 projs:
-  - title: Source mask co-optimization from bilevel optimization perspective.
-    descr: Traditional SMO is hindered by slow, sequential and alternating optimizations without assured outcomes. I've redeveloped it using bilevel optimization and gradient-based methods, providing global perspective through upper-lower level gradient fusion for enhanced performance.
+  # - title: Source mask co-optimization from bilevel optimization perspective.
+    # descr: Traditional SMO is hindered by slow, sequential and alternating optimizations without assured outcomes. I've redeveloped it using bilevel optimization and gradient-based methods, providing global perspective through upper-lower level gradient fusion for enhanced performance.
   - title: Differentiable Computational Lithography.
     descr: Revamping lithography with a GPU-accelerated, differentiable workflow based on Abbe imaging, using automatic differentiation to target diverse resolution enhancement objectives.
 
