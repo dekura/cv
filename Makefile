@@ -47,6 +47,11 @@ viewpdf: $(PDF)
 wslpdf:
 	wslview $(PDF)
 
+
+md: $(BUILD_DIR) $(TEMPLATES) $(YAML_FILES) generate.py publications/*.bib
+	./generate.py -m $(YAML_FILES)
+
+
 stage: $(PDF) $(MD)
 	cp $(PDF) $(WEBSITE_PDF)
 	cp $(MD) $(WEBSITE_MD)
