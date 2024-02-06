@@ -133,7 +133,7 @@ categories_publications:
   categories:
     -
       heading: "Conference papers"
-      file: all.bib
+      file: conf.bib
       prefix: 'C'
     -
       heading: "Journal papers"
@@ -178,6 +178,8 @@ categories_publications:
     'Fangzhou Liu' : 'https://gjchen.me'
     'Haisheng Zheng' : 'https://gjchen.me'
     'Fan Yang' : 'https://sme.fudan.edu.cn/65/41/c31277a353601/page.htm'
+    'David Z. Pan' : 'https://www.ece.utexas.edu/people/faculty/david-z-pan'
+    'Hao Geng' : 'https://true-genghao.github.io/genghao/'
 
 
 
