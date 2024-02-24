@@ -21,8 +21,9 @@ order:
   - [education, Education]
   - [research_interests, Research Interests]
   # - [all_publications, Publications]
-  # - [news, News]
+
   - [categories_publications, Publications]
+  - [news, News]
   - [repos, Open Source Repositories]
   - [positions, Experiences]
   # - [talks, Invited Talks]
@@ -113,10 +114,18 @@ education:
 #   location: Roanoke, VA
 #   dates: 2011
 news:
+  - date: Feb. 25 2024
+    info: Traveling to SPIE24, San Jose.
+  - date: Feb. 13, 2024
+    info: Three papers got accepted by DAC 2024.
+  - date: Jan. 13, 2024
+    info: One TCAD about source mask optimization got accepted.
   - date: Aug. 01, 2023
     info: Coming to Austin.
-  - date: Jul. 2023
+  - date: Jul. 28, 2023
     info: Attending DAC conference.
+  - date: Feb. 06, 2023
+    info: Two papers got accepted by DAC 2023, one paper get best score in DFM track.
 
 positions:
   - place: The Chinese University of Hong Kong

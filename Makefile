@@ -50,6 +50,8 @@ wslpdf:
 
 md: $(BUILD_DIR) $(TEMPLATES) $(YAML_FILES) generate.py publications/*.bib
 	./generate.py -m $(YAML_FILES)
+	cp $(MD) $(WEBSITE_MD)
+	date +%Y-%m-%d > $(WEBSITE_DATE)
 
 
 stage: $(PDF) $(MD)
