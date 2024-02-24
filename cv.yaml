@@ -58,7 +58,9 @@ about: |
       <img class="media-object img-rounded" src="/images/ai4eda.png" alt="AI for EDA">
   </a>
   </div>
-  <h4 class="media-heading"><a href="https://ai4eda.github.io/" target="_blank">AI for EDA</a></h4>
+  <h4 class="media-heading"><a href="https://ai4eda.github.io/" target="_blank">AI for EDA</a>
+  <img style="border:none;max-height:.9em;margin:0;padding:0" src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fai4eda.github.io%2F&labelColor=%231863e6&countColor=%23d9e3f0&style=flat-square&labelStyle=upper" />
+  </h4>
   <div class="media-body media-middle">
   <p align='justify'>
   I'm also maintaining a curated list of <b>AI for EDA</b> papers. Check it out here:
