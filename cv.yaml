@@ -255,12 +255,16 @@ projs:
 
 
 repos:
+  - repo_url: https://github.com/TorchOPC/TorchLitho
+    year: 2024
+    desc: Differentiable computational lithography with PyTorch
   - repo_url: https://github.com/OpenOPC/OpenILT
     year: 2023
     desc: Open-source inverse lithography technology (ILT) framework
   - repo_url: https://github.com/ai4eda/awesome-AI4EDA
     year: 2023
     desc: A curated paper list of existing AI for EDA studies.
+
 
 talks:
   - year: 2022

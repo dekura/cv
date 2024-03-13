@@ -646,8 +646,6 @@ class RenderContext(object):
                     self.SECTIONS_DIR, section_tag + self._file_ending)
                 # section_template_name = os.path.join(self.SECTIONS_DIR, 'news.md')
             elif section_tag == 'repos':
-                if self._context_name == 'markdown':
-                    continue
                 add_repo_data(self, section_content)
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
