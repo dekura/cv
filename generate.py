@@ -84,6 +84,7 @@ def get_pub_md(context, config):
         # title = '"{}"'.format(title)
         title = title.replace("\n", " ")
 
+
         assert('_venue' in pub and 'year' in pub)
         year_venue = "{} {}".format(pub['_venue'], pub['year'])
 
@@ -651,13 +652,13 @@ class RenderContext(object):
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
             # won't show on website
-            elif section_tag in ['current_position', 'research_interests', 'education', 'projs', 'positions', 'honors']:
+            elif section_tag in ['current_position', 'research_interests', 'education', 'projs',  'honors']:
                 if self._context_name == 'markdown':
                     continue
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
-            elif section_tag in ['coursework',
+            elif section_tag in ['coursework', 'positions',
                                 'research', 'skills', 'service',
                                 'talks', 'advising']:
                 section_data['items'] = section_content

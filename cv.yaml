@@ -20,12 +20,13 @@ order:
   - [current_position, Current Position]
   - [education, Education]
   - [research_interests, Research Interests]
+  - [positions, Experiences]
   # - [all_publications, Publications]
 
   - [categories_publications, Publications]
   - [news, News]
   - [repos, Open Source Repositories]
-  - [positions, Experiences]
+
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
   - [honors, Awards]
@@ -127,12 +128,26 @@ news:
     info: Two papers got accepted by DAC 2023, one paper get best score in DFM track.
 
 positions:
-  - place: The Chinese University of Hong Kong
-    title: Research Assistant
-    dates: 2020 -- 2021
+  - place: NVIDIA
+    title: Research Scientist Intern
+    logo: /images/logos/nvidia.svg
+    location: Austin, TX
+    dates: 2024.05 -- Present
+    inline_detail: "Mentor \\& Manager. \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
+
+  - place: The University of Texas at Austin
+    title: Visiting Ph.D. Student
+    logo: /images/logos/utlogo.svg
+    location: Austin, TX
+    dates: 2023.08 -- 2024.5
+    inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
+  # - place: The Chinese University of Hong Kong
+    # title: Research Assistant
+    # dates: 2020 -- 2021
   - place: Tencent
     title: Research Intern
-    # inline_detail: "with \\href{http://zicokolter.com}{J. Zico Kolter} on ML and optimization"
+    logo: /images/logos/tencent.svg
+    location: Shenzhen, China
     dates: 2018 -- 2019
 
 categories_publications:
