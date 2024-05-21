@@ -39,7 +39,7 @@ about: |
   <p align='justify'>
   Greetings! I'm currently an intern at NVIDIA research, work with \href{https://phdyang007.github.io/}{Haoyu Yang} and \href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}.
   I'm thrilled to have this opportunity to collaborate and expand my research horizons at \href{https://www.nvidia.com/en-us/research/}{NVIDIA research}.
-  I am also a Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
+  I am also a final-year Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
   </p>
   <h3>Research Interests:</h3>
   <ul>
@@ -77,12 +77,12 @@ research_interests:
   - "Optimization: bi-level \\& multi-level optimization, GPU acceleration, level-set optimization."
 
 current_position:
-  - place: The University of Texas at Austin
-    # location: Austin, Texas
-    title: Visiting Student
-    dates: 2023.08 -- Present
+  - place: NVIDIA
+    location: Austin, Texas
+    title: Research Intern
+    dates: 2024.04 -- Present
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
-    details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
+    # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
   - place: The Chinese University of Hong Kong
     # location: Shatin, Hong Kong
     title: Ph.D. Candidate
@@ -146,11 +146,11 @@ positions:
   # - place: The Chinese University of Hong Kong
     # title: Research Assistant
     # dates: 2020 -- 2021
-  - place: Tencent
-    title: Research Intern
-    logo: /images/logos/tencent.svg
-    location: Shenzhen, China
-    dates: 2018 -- 2019
+  # - place: Tencent
+  #   title: Research Intern
+  #   logo: /images/logos/tencent.svg
+  #   location: Shenzhen, China
+  #   dates: 2018 -- 2019
 
 categories_publications:
   name: "Guojin Chen"
