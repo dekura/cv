@@ -146,11 +146,11 @@ positions:
   # - place: The Chinese University of Hong Kong
     # title: Research Assistant
     # dates: 2020 -- 2021
-  # - place: Tencent
-  #   title: Research Intern
-  #   logo: /images/logos/tencent.svg
-  #   location: Shenzhen, China
-  #   dates: 2018 -- 2019
+  - place: Tencent
+    title: Research Intern
+    logo: /images/logos/tencent.svg
+    location: Shenzhen, China
+    dates: 2018 -- 2019
 
 categories_publications:
   name: "Guojin Chen"
