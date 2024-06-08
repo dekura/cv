@@ -131,14 +131,14 @@ news:
 
 positions:
   - place: NVIDIA
-    title: Research Intern
+    title: Research Scientist Intern
     logo: /images/logos/nvidia.svg
     location: Austin, TX
     dates: 2024.05 -- Present
     inline_detail: "Mentor \\& Manager. \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
 
   - place: The University of Texas at Austin
-    title: Visiting Ph.D. Student
+    title: Visiting Scholar
     logo: /images/logos/utlogo.svg
     location: Austin, TX
     dates: 2023.08 -- 2024.5
