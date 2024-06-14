@@ -131,8 +131,20 @@ def get_pub_md(context, config):
             note_str = ''
 
         tr_style = 'style="background-color: #ffffd0"' if highlight else ''
-        if include_image:
+        if pub['_venue'].lower() == 'arxiv':
             return f'''
+<tr id="tr-{pub['ID']}" {tr_style}>
+<td align='right'>
+[{prefix}{gidx}]
+</td>
+<td>
+{title} {links} {year_venue} {note_str} <br>
+</td>
+</tr>
+'''
+        else:
+            if include_image:
+                return f'''
 <tr id="tr-{pub['ID']}" {tr_style}>
 <td align='right' style='padding-left:0;padding-right:0;'>
 [{prefix}{gidx}]
@@ -146,8 +158,8 @@ def get_pub_md(context, config):
 </td>
 </tr>
 '''
-        else:
-            return f'''
+            else:
+                return f'''
 <tr id="tr-{pub['ID']}" {tr_style}>
 <td align='right'>
 [{prefix}{gidx}]
