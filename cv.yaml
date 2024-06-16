@@ -95,8 +95,9 @@ education:
     location: Hong Kong, China
     degree: Ph.D. in Computer Science
     dates: 2021 -- Present
-    # details:
-      # - "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+    details:
+      - "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+
   - school: The Chinese University of Hong Kong
     location: Hong Kong, China
     degree: M.S. in Computer Science
