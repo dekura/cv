@@ -4,7 +4,7 @@ name:
 email: cgjcuhk@gmail.com
 pdf: /data/cv.pdf
 src: https://github.com/dekura/cv
-url: "gjchen.me"
+url: "https://gjchen.me"
 social:
   github: dekura
   linkedin: dekura
@@ -30,7 +30,7 @@ order:
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
   - [honors, Awards]
-  - [projs, Ongoing Projects]
+  # - [projs, Ongoing Projects]
   - [service, Professional Activities]
   - [teaching, Teaching]
   # - [skills, Skills]
@@ -87,8 +87,8 @@ current_position:
     # location: Shatin, Hong Kong
     title: Ph.D. Candidate
     dates: 2021.08 -- Present
-    # inline_detail: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
-    details: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+    inline_detail: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+    # details: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
 
 education:
   - school: The Chinese University of Hong Kong
