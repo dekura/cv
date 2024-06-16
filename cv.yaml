@@ -4,7 +4,7 @@ name:
 email: cgjcuhk@gmail.com
 pdf: /data/cv.pdf
 src: https://github.com/dekura/cv
-url: "https://gjchen.me"
+url: gjchen.me
 social:
   github: dekura
   linkedin: dekura
@@ -37,7 +37,7 @@ order:
 
 about: |
   <p align='justify'>
-  Greetings! I'm currently an intern at NVIDIA research, work with \href{https://phdyang007.github.io/}{Haoyu Yang} and \href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}.
+  Greetings! I'm currently an intern at NVIDIA research, working with \href{https://phdyang007.github.io/}{Haoyu Yang} and \href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}.
   I'm thrilled to have this opportunity to collaborate and expand my research horizons at \href{https://www.nvidia.com/en-us/research/}{NVIDIA research}.
   I am also a final-year Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
   </p>
@@ -77,9 +77,9 @@ research_interests:
   - "Optimization: bi-level \\& multi-level optimization, GPU acceleration, level-set optimization."
 
 current_position:
-  - place: NVIDIA
+  - place: NVIDIA Research
     location: Austin, Texas
-    title: Research Intern
+    title: Research Scientist Intern
     dates: 2024.04 -- Present
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
