@@ -164,6 +164,10 @@ categories_publications:
       heading: "Journal papers"
       file: journal.bib
       prefix: 'J'
+    -
+      heading: "Preprints"
+      file: arxiv.bib
+      prefix: 'P'
   group_by_topic: False
   sort_bib: True
   include_image: False
