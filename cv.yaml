@@ -115,6 +115,8 @@ education:
 #   location: Roanoke, VA
 #   dates: 2011
 news:
+  - date: June. 24, 2024
+    info: Attending DAC 2024, San Francisco, CA.
   - date: Apr. 29, 2024
     info: Starting internship at NVIDIA Research. Let's rock'n'roll! Many thanks to my mentor Haoyu Yang and Mark Ren.
   - date: Feb. 25, 2024
