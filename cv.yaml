@@ -37,8 +37,8 @@ order:
 
 about: |
   <p align='justify'>
-  Greetings! I'm currently an intern at NVIDIA research, working with \href{https://phdyang007.github.io/}{Haoyu Yang} and \href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}.
-  I'm thrilled to have this opportunity to collaborate and expand my research horizons at \href{https://www.nvidia.com/en-us/research/}{NVIDIA research}.
+  Greetings! I'm currently an intern at Google DeepMind.
+  I'm thrilled to have this opportunity to collaborate and expand my research horizons at \href{https://deepmind.google/}{Google DeepMind}.
   I am also a final-year Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
   </p>
   <h3>Research Interests:</h3>
@@ -133,11 +133,17 @@ news:
     info: Two papers got accepted by DAC 2023, one paper get best score in DFM track.
 
 positions:
+  - place: Google DeepMind
+    # title: Research Scientist Intern
+    logo: /images/logos/DeepMind.svg
+    location: Mountain view, CA
+    dates: 2024.07 -- Present
+    # inline_detail: "Mentor.  \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
   - place: NVIDIA
     title: Research Scientist Intern
     logo: /images/logos/nvidia.svg
     location: Austin, TX
-    dates: 2024.04 -- Present
+    dates: 2024.04 -- 2024.07
     inline_detail: "Mentor \\& Manager. \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
 
   - place: The University of Texas at Austin
@@ -222,6 +228,8 @@ categories_publications:
     'Siyuan Xu' : 'https://scholar.google.com/citations?user=TRDUYkAAAAAJ&hl=en'
     'Haoxing Ren': 'https://research.nvidia.com/person/haoxing-mark-ren'
     'David Z Pan': 'https://users.ece.utexas.edu/~dpan/'
+    'Yao Lai': 'https://laiyao1.github.io/'
+    'Hanqing Zhu': 'https://zhuhanqing.github.io/'
 
 
 
