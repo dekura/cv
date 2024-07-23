@@ -77,10 +77,10 @@ research_interests:
   - "Optimization: bi-level \\& multi-level optimization, GPU acceleration, level-set optimization."
 
 current_position:
-  - place: NVIDIA Research
-    location: Austin, Texas
-    title: Research Scientist Intern
-    dates: 2024.04 -- Present
+  - place: Google DeepMind
+    location: Mountain View, California
+    title: Ph.D. Student Researcher
+    dates: 2024.07 -- Present
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
   - place: The Chinese University of Hong Kong
@@ -111,10 +111,9 @@ education:
     dates: 2015 -- 2019
     # overallGPA: 3.99/4.00
 
-# - school: Northside High School
-#   location: Roanoke, VA
-#   dates: 2011
 news:
+  - date: July. 22, 2024
+    info: Starting internship at Google DeepMind, Mountain View, CA.
   - date: June. 24, 2024
     info: Attending DAC 2024, San Francisco, CA.
   - date: Apr. 29, 2024
@@ -134,7 +133,7 @@ news:
 
 positions:
   - place: Google DeepMind
-    # title: Research Scientist Intern
+    title: Ph.D. Student Researcher
     logo: /images/logos/DeepMind.svg
     location: Mountain view, CA
     dates: 2024.07 -- Present
