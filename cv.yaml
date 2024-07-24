@@ -133,7 +133,7 @@ news:
 positions:
   - place: Google DeepMind
     title: Ph.D. Student Researcher
-    logo: /images/logos/DeepMind.svg
+    logo: /images/logos/deepmind_large.svg
     location: Mountain view, CA
     dates: 2024.07 -- Present
     # inline_detail: "Mentor.  \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
