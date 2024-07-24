@@ -37,8 +37,7 @@ order:
 
 about: |
   <p align='justify'>
-  Greetings! I'm currently an intern at Google DeepMind.
-  I'm thrilled to have this opportunity to collaborate and expand my research horizons at \href{https://deepmind.google/}{Google DeepMind}.
+  Greetings! I'm currently an intern at  \href{https://deepmind.google/}{Google DeepMind}.
   I am also a final-year Ph.D. candidate at The Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
   </p>
   <h3>Research Interests:</h3>
