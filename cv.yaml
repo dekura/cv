@@ -326,12 +326,14 @@ service:
     - "AAAI Conference on Artificial Intelligence"
     - "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)"
   main:
+    - details: Neural Information Processing Systems (NeurIPS)
+      year: 2023-2024
     - details: Design Automation Conference (DAC)
-      year: 2021-2023
+      year: 2021-2024
     - details: AAAI Conference on Artificial Intelligence (AAAI)
-      year: 2022-2023
+      year: 2022-2025
     - details: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
-      year: 2022-2023
+      year: 2022-2024
 
 
 
