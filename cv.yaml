@@ -42,8 +42,8 @@ about: |
   </p>
   <h3>Research Interests:</h3>
   <ul>
-    <li>Scaling deep learning: large language models, LLM on EDA, large-scale layout representation learning.</li>
-    <li>Design for manufacturing: computational lithography, mask optimization, OPC, SMO.</li>
+    <li>Scaling deep learning: large language models, LLM on EDA, large-scale layout representation learning. [\href{https://arxiv.org/abs/2406.05250}{arxiv'24}]</li>
+    <li>Design for manufacturing: computational lithography [\href{https://www.cse.cuhk.edu.hk/~byu/papers/C201-SPIE2024-OpenLitho.pdf}{SPIE'24}'23], OPC [DAC'24'23,ICCAD'24'23'22'21'20], SMO [\href{https://arxiv.org/abs/2405.09548}{DAC'24}].</li>
     <li>Optimization: bi-level & multi-level optimization, GPU acceleration, level-set optimization.</li>
     <li>Deep learning in VLSI design: physics-informed networks for EDA problems</li>
   </ul>
