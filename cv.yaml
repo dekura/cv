@@ -12,8 +12,8 @@ social:
 
 # LaTeX formatting
 style: banking # casual, classic, oldstyle, or banking
-color: blue # blue, orange, green, red, purple, grey and black
-color2: '0.25,0.25,0.25' # Make the font under the name a darker grey.
+color: blue # blue, orange, green, red, purple, #9a9a9a and black
+color2: '0.25,0.25,0.25' # Make the font under the name a darker #9a9a9a.
 
 order:
   - [about, NONE]
@@ -42,10 +42,16 @@ about: |
   </p>
   <h3>Research Interests:</h3>
   <ul>
-    <li>Scaling deep learning: large language models, LLM on EDA, large-scale layout representation learning. [\href{https://arxiv.org/abs/2406.05250}{arxiv'24}]</li>
-    <li>Design for manufacturing: computational lithography [\href{https://www.cse.cuhk.edu.hk/~byu/papers/C201-SPIE2024-OpenLitho.pdf}{SPIE'24}'23], OPC [DAC'24'23,ICCAD'24'23'22'21'20], SMO [\href{https://arxiv.org/abs/2405.09548}{DAC'24}].</li>
-    <li>Optimization: bi-level & multi-level optimization, GPU acceleration, level-set optimization.</li>
-    <li>Deep learning in VLSI design: physics-informed networks for EDA problems</li>
+    <li>Scaling deep learning:
+    large language models, LLM on EDA <span style="color:#9a9a9a">[arxiv'\href{https://arxiv.org/abs/2406.05250}{24}]</span>,
+    large-scale layout representation learning <span style="color:#9a9a9a">[ICCAD'\href{https://www.cse.cuhk.edu.hk/~byu/papers/C146-ICCAD2022-LayouTransformer.pdf}{22}]</span>.
+    </li>
+    <li>Design for manufacturing:
+    computational lithography <span style="color:#9a9a9a">[SPIE'\href{https://www.cse.cuhk.edu.hk/~byu/papers/C201-SPIE2024-OpenLitho.pdf}{24}'\href{https://arxiv.org/abs/2303.14335}{23}]</span>,
+    OPC <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2408.08969}{24}'\href{https://arxiv.org/abs/2303.08435}{23},ICCAD'\href{https://arxiv.org/abs/2408.08969}{24}'\href{https://www.cse.cuhk.edu.hk/~byu/papers/C148-ICCAD2022-AdaOPC.pdf}{22}'\href{https://arxiv.org/abs/2303.12529}{21}'\href{https://arxiv.org/abs/2008.00806}{20}]</span>,
+    SMO <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2405.09548}{24}, TCAD'\href{https://ieeexplore.ieee.org/document/10419017}{24}]</span>.</li>
+    <li>Optimization: bi-level & multi-level optimization <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2405.09548}{24}]</span>, level-set optimization <span style="color:#9a9a9a">[ICCAD'\href{https://arxiv.org/abs/2303.12529}{21}]</span>, GPU acceleration.</li>
+    <li>Deep learning in VLSI design: physics-informed networks for EDA problems <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2303.08435}{23}]</span>.</li>
   </ul>
 
 
