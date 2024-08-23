@@ -278,6 +278,9 @@ repos:
   - repo_url: https://github.com/TorchOPC/TorchLitho
     year: 2024
     desc: Differentiable computational lithography with PyTorch
+  - repo_url: https://github.com/dekura/LLANA
+    year: 2024
+    desc: LLM-Enhanced Bayesian Optimization for Efficient Analog Constraint Generation
   - repo_url: https://github.com/OpenOPC/OpenILT
     year: 2023
     desc: Open-source inverse lithography technology (ILT) framework
