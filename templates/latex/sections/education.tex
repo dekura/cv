@@ -13,9 +13,11 @@
     \hfill << school.dates >> \par
   ~< endif >~
   ~< if school.details >~
+   {\footnotesize \color{gray}
     ~< for detail in school.details ->~
         <<detail>> \par
     ~< endfor >~
+   }
   ~< endif >~
   % ~< if school.location >~
     % \hfill \textit{<< school.location >>} \par
