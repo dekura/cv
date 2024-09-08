@@ -14,3 +14,21 @@ Representative publications that I am a primary author on are
 {{ type_content.details }}
 
 {% endfor %}
+
+
+<div class="well" style="padding:15px">
+<div class="media">
+<div class="media-left media-middle col-xs-3 col-sm-2 col-md-1">
+<img class="media-object img-rounded" src="/images/notion.png" alt="Deatiled Research Overview">
+</div>
+<h4 class="media-heading"><a href="https://gjchen.notion.site/" target="_blank">Research Overview</a>
+</h4>
+<div class="media-body media-middle">
+<p style="margin:0">
+<a href="https://gjchen.notion.site/" target="_blank">
+If you want to understand what drives my research and learn more about the specific details of my research direction, please be sure to click on this link. I've 
+prepared a detailed document for you. </a>
+</p>
+</div>
+</div>
+</div>

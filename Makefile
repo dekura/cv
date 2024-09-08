@@ -57,7 +57,7 @@ md: $(BUILD_DIR) $(TEMPLATES) $(YAML_FILES) generate.py publications/*.bib
 stage: $(PDF) $(MD)
 	cp $(PDF) $(WEBSITE_PDF)
 	cp $(MD) $(WEBSITE_MD)
-	date +%Y-%m-%d > $(WEBSITE_DATE)
+	date +"%b, %Y" > $(WEBSITE_DATE)
 
 jekyll: stage
 	cd $(WEBSITE_DIR) && bundle exec jekyll server
