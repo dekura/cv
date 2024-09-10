@@ -1,5 +1,20 @@
 ## <i class="fa fa-chevron-right"></i> {{ name }}
-
+<div class="well" style="padding:5px">
+<div class="media">
+<div class="media-left media-middle col-xs-1 col-sm-1 col-md-1 col-lg-1">
+<img class="media-object img-rounded" style="width:2em" src="/images/notion.png" alt="Deatiled Research Overview">
+</div>
+<h4 class="media-heading"><a href="https://gjchen.notion.site/" target="_blank">Research Overview</a>
+</h4>
+<div class="media-body media-middle">
+<p style="margin:0">
+<a href="https://gjchen.notion.site/" target="_blank">
+To learn more about my research and its direction, be sure to click this link for a detailed document with rich text and images.
+</a>
+</p>
+</div>
+</div>
+</div>
 Representative publications that I am a primary author on are
 <span style='background-color: #ffffd0'>highlighted.</span>
 <br>
@@ -16,19 +31,3 @@ Representative publications that I am a primary author on are
 {% endfor %}
 
 
-<div class="well" style="padding:15px">
-<div class="media">
-<div class="media-left media-middle col-xs-3 col-sm-2 col-md-1">
-<img class="media-object img-rounded" src="/images/notion.png" alt="Deatiled Research Overview">
-</div>
-<h4 class="media-heading"><a href="https://gjchen.notion.site/" target="_blank">Research Overview</a>
-</h4>
-<div class="media-body media-middle">
-<p style="margin:0">
-<a href="https://gjchen.notion.site/" target="_blank">
-If you want to understand what drives my research and learn more about the specific details of my research direction, please be sure to click on this link. I've 
-prepared a detailed document for you. </a>
-</p>
-</div>
-</div>
-</div>
