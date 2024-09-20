@@ -1,9 +1,11 @@
 ~< extends "section.tex" >~
-
 ~< block body >~
-    \begin{itemize}
-      ~< for item in items >~
-            \item << item >>
-      ~< endfor >~
-    \end{itemize}
+\begin{tcolorbox}[colback=blue!5!white, colframe=note_highlight, boxrule=0.2mm, left=1mm, right=1mm, bottom=1mm, title=Research Overview]
+  \href{https://gjchen.notion.site/}{\textcolor{note_highlight}{\textit{To learn more about my research, click \underline{this link} for a detailed document with rich text and images.}}}
+\end{tcolorbox}
+\begin{itemize}
+  ~< for item in items >~
+        \item << item >>
+  ~< endfor >~
+\end{itemize}
 ~< endblock body >~
