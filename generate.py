@@ -53,25 +53,19 @@ def get_pub_md(context, config):
                 k = list(filter(lambda k: k in new_auth, author_urls.keys()))
                 if len(k) == 0 and config['name'] not in new_auth:
                     print(f"+ Author URL not found for {new_auth}")
-
                 # add strong to own name
                 # if config['name'] in new_auth:
-                #     new_auth = "<b>" + new_auth + "</b>"
-
+                    # new_auth = "<b>" + new_auth + "</b>"
                 new_auth = new_auth.replace(' ', '&nbsp;')
                 if len(k) > 0:
                     assert len(k) == 1, k
                     url = author_urls[k[0]]
                     new_auth = f"<a href='{url}' target='_blank'>{new_auth}</a>"
-
-
             else:
                 # add strong to own name
+                new_auth = new_auth.replace(' ', '&nbsp;')
                 # if config['name'] in new_auth:
                     # new_auth = "<b>" + new_auth + "</b>"
-                new_auth = new_auth.replace(' ', '&nbsp;')
-
-
             formatted_authors.append(new_auth)
         return formatted_authors
 
