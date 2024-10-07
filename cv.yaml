@@ -145,11 +145,11 @@ positions:
     dates: 2023.08 -- 2024.4
     inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
   - place: Tencent
-    title: Research Intern
+    title: Intern
     logo: /images/logos/tencent.svg
     pdf_logo: tencent.pdf
     location: Shenzhen, China
-    dates: 2018 -- 2019
+    dates: 2018
 
 categories_publications:
   name: "Guojin Chen"
