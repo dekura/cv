@@ -37,8 +37,7 @@ order:
 
 about: |
   <p align='justify'>
-  Greetings! I'm currently a student researcher at  \href{https://deepmind.google/}{Google DeepMind}.
-  I am also a final-year Ph.D. candidate at Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
+  I am a final-year Ph.D. candidate at Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}.
   </p>
   <p style="text-align: center;"><span style="color: red;">I am on the job market for 2024-2025, appreciate any opportunities!</span></p>
   <h3>Research Interests:</h3>
@@ -68,7 +67,7 @@ current_position:
   - place: Google DeepMind
     location: Mountain View, California
     title: Ph.D. Student Researcher
-    dates: 2024.07 -- Present
+    dates: 2024.07 -- 2024.10
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
   - place: Chinese University of Hong Kong
