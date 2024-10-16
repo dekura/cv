@@ -99,6 +99,8 @@ education:
     # overallGPA: 3.99/4.00
 
 news:
+  - data: Oct. 15, 2024
+    info: Back to HK, offer offer come to me!
   - date: Aug. 07, 2024
     info: Good day! My google scholar citation reached 200. Small step for others, big step for me!
   - date: July. 22, 2024
@@ -126,7 +128,7 @@ positions:
     logo: /images/logos/deepmind_large.svg
     pdf_logo: deepmind_large.pdf
     location: Mountain view, CA
-    dates: 2024.07 -- Present
+    dates: 2024.07 -- 2024.10
     # inline_detail: "Mentor.  \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
   - place: NVIDIA
     title: Research Scientist Intern
