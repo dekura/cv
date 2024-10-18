@@ -99,7 +99,7 @@ education:
     # overallGPA: 3.99/4.00
 
 news:
-  - data: Oct. 15, 2024
+  - date: Oct. 15, 2024
     info: Back to HK, offer offer come to me!
   - date: Aug. 07, 2024
     info: Good day! My google scholar citation reached 200. Small step for others, big step for me!
