@@ -157,6 +157,10 @@ categories_publications:
   file: all.bib
   categories:
     -
+      heading: "Preprints"
+      file: arxiv.bib
+      prefix: 'P'
+    -
       heading: "Conference papers"
       file: conf.bib
       prefix: 'C'
@@ -164,10 +168,7 @@ categories_publications:
       heading: "Journal papers"
       file: journal.bib
       prefix: 'J'
-    -
-      heading: "Preprints"
-      file: arxiv.bib
-      prefix: 'P'
+
   group_by_topic: False
   sort_bib: True
   include_image: False
