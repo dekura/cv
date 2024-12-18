@@ -157,10 +157,6 @@ categories_publications:
   file: all.bib
   categories:
     -
-      heading: "Preprints"
-      file: arxiv.bib
-      prefix: 'P'
-    -
       heading: "Conference papers"
       file: conf.bib
       prefix: 'C'
@@ -168,6 +164,10 @@ categories_publications:
       heading: "Journal papers"
       file: journal.bib
       prefix: 'J'
+    -
+      heading: "Preprints"
+      file: arxiv.bib
+      prefix: 'P'
 
   group_by_topic: False
   sort_bib: True
@@ -228,6 +228,10 @@ categories_publications:
     'Jiaqi Gu': 'https://scopex-asu.github.io/'
     'Seunggeun Kim': 'https://www.linkedin.com/in/seunggeun-kim-0b09b3245/'
     'Xiaoxiao Liang': 'https://xxliang99.github.io/'
+    'Sungyoung Lee': 'https://gjchen.me'
+    'Souradip Poddar': 'https://gjchen.me'
+    'Mengkang Hu': 'https://gjchen.me'
+    'Ping Luo': 'http://luoping.me/'
 
 
 
