@@ -145,6 +145,15 @@ positions:
     location: Austin, TX
     dates: 2023.08 -- 2024.4
     inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
+
+  # - place: Chinese University of Hong Kong
+  #   title: Research Assistant
+  #   # logo: /images/logos/utlogo.svg
+  #   # pdf_logo: utlogo.pdf
+  #   location: Hong Kong, China
+  #   dates: 2020.08 -- 2021.08
+  #   inline_detail: "Supervisor : Prof. \\href{https://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
+
   - place: Tencent
     title: Intern
     logo: /images/logos/tencent.svg
