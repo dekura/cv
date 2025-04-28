@@ -9,3 +9,4 @@ venv
 auto
 .vscode
 .DS_Store
+.envrc
