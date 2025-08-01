@@ -37,50 +37,37 @@ order:
 
 about: |
   <p align='justify'>
-  I am a final-year Ph.D. candidate at Chinese University of Hong Kong (CUHK-CSE), where I have been fortunate to work with Professor \href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} and co-supervised by Professor \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D. F. Wong}. My Chinese name is 陈国晋.
+  I am a researcher at Huawei Noah's Ark Lab (Hong Kong Research Center). My Chinese name is 陈国晋. I received my Ph.D. degree from Chinese University of Hong Kong, supervised by Prof. \href{https://www.cse.cuhk.edu.hk/~byu/}{Bei Yu} \& Prof. \href{https://scholar.google.com/citations?user=WPhoQiUAAAAJ}{Martin D.F. Wong}.
   </p>
   <h3>Research Interests:</h3>
   <ul>
-    <li>Large language models:
-    agent systems<span style="color:#9a9a9a">[arxiv'\href{https://arxiv.org/abs/2408.12775}{24}]</span>, LLM on EDA <span style="color:#9a9a9a">[arxiv'\href{https://arxiv.org/abs/2406.05250}{24}]</span>,
-    large-scale layout representation learning <span style="color:#9a9a9a">[ICCAD'\href{https://www.cse.cuhk.edu.hk/~byu/papers/C146-ICCAD2022-LayouTransformer.pdf}{22}]</span>.
-    </li>
-    <li>Design for manufacturing:
-    computational lithography <span style="color:#9a9a9a">[SPIE'\href{https://www.cse.cuhk.edu.hk/~byu/papers/C201-SPIE2024-OpenLitho.pdf}{24}'\href{https://arxiv.org/abs/2303.14335}{23}]</span>,
-    OPC <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2408.08969}{24}'\href{https://arxiv.org/abs/2303.08435}{23},ICCAD'\href{https://arxiv.org/abs/2408.08969}{24}'\href{https://www.cse.cuhk.edu.hk/~byu/papers/C148-ICCAD2022-AdaOPC.pdf}{22}'\href{https://arxiv.org/abs/2303.12529}{21}'\href{https://arxiv.org/abs/2008.00806}{20}]</span>,
-    SMO <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2405.09548}{24}, TCAD'\href{https://ieeexplore.ieee.org/document/10419017}{24}]</span>.</li>
-    <li>Optimization: bi-level & multi-level optimization <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2405.09548}{24}]</span>, level-set optimization <span style="color:#9a9a9a">[ICCAD'\href{https://arxiv.org/abs/2303.12529}{21}]</span>, GPU acceleration.</li>
-    <li>Deep learning in VLSI design: physics-informed networks for EDA problems <span style="color:#9a9a9a">[DAC'\href{https://arxiv.org/abs/2303.08435}{23}]</span>.</li>
+    <li>Large language models: agentic native LLMs, multimodal LLMs.</li>
+    <li>Design for manufacturing: computational lithography, OPC, SMO.</li>
+    <li>Optimization: bi-level, multi-level optimization, level-set optimization, GPU acceleration.</li>
+    <li>Deep learning in VLSI design.</li>
   </ul>
   Check my <a href="https://gjchen.notion.site/" target="_blank">research overview here</a>.
 
 
 
 research_interests:
-  - "Large language models: agent systems, LLM on EDA, large-scale layout representaion learning."
-  - "Design for manufacturing: computational lithography, mask optimization, OPC, SMO."
-  - "Deep learning in VLSI design: physics-informed networks for EDA problems"
-  - "Optimization: bi-level \\& multi-level optimization, GPU acceleration, level-set optimization."
+  - "Large language models: agentic native LLMs, multimodal LLMs."
+  - "Design for manufacturing: computational lithography, OPC, SMO."
+  - "Optimization: bi-level, multi-level optimization, level-set optimization, GPU acceleration."
 
 current_position:
-  - place: Google DeepMind
-    location: Mountain View, California
-    title: Ph.D. Student Researcher
-    dates: 2024.07 -- 2024.10
+  - place: Huawei Noah's Ark Lab
+    location: Hong Kong, China
+    title: Researcher
+    dates: 2025.08 -- Present
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
-  - place: Chinese University of Hong Kong
-    # location: Shatin, Hong Kong
-    title: Ph.D. Candidate
-    dates: 2021.08 -- Present
-    inline_detail: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
-    # details: "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
 
 education:
   - school: Chinese University of Hong Kong
     location: Hong Kong, China
     degree: Ph.D. in Computer Science
-    dates: 2021 -- Present
+    dates: 2021 -- 2025
     details:
       - "Supervisor : Prof. \\href{http://www.cse.cuhk.edu.hk/~byu/}{Bei Yu}"
 
@@ -98,6 +85,8 @@ education:
     # overallGPA: 3.99/4.00
 
 news:
+  - date: July. 14, 2025
+    info: I start my new journey at Huawei Noah's Ark Lab, Hong Kong.
   - date: Mar. 20, 2025
     info: My citation reached 300. Keep going!
   - date: Oct. 15, 2024
@@ -127,14 +116,13 @@ positions:
   - place: Google DeepMind
     title: Ph.D. Student Researcher
     logo: /images/logos/deepmind_large.svg
-    pdf_logo: deepmind_large.pdf
     location: Mountain view, CA
     dates: 2024.07 -- 2024.10
     # inline_detail: "Mentor.  \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
   - place: NVIDIA
     title: Research Scientist Intern
     logo: /images/logos/nvidia.svg
-    pdf_logo: nvidia.pdf
+    # pdf_logo: nvidia.pdf
     location: Austin, TX
     dates: 2024.04 -- 2024.07
     inline_detail: "Mentor \\& Manager. \\href{https://phdyang007.github.io/}{Haoyu Yang} \\& \\href{https://research.nvidia.com/person/haoxing-mark-ren}{Mark Ren}"
@@ -142,7 +130,7 @@ positions:
   - place: University of Texas at Austin
     title: Visiting Scholar
     logo: /images/logos/utlogo.svg
-    pdf_logo: utlogo.pdf
+    # pdf_logo: utlogo.pdf
     location: Austin, TX
     dates: 2023.08 -- 2024.4
     inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
@@ -158,7 +146,7 @@ positions:
   - place: Tencent
     title: Intern
     logo: /images/logos/tencent.svg
-    pdf_logo: tencent.pdf
+    # pdf_logo: tencent.pdf
     location: Shenzhen, China
     dates: 2018
 
