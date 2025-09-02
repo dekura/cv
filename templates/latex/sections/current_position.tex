@@ -2,6 +2,9 @@
 
 ~< block body >~
 ~< for item in items >~
+    ~< if item.pdf_logo ->~
+    \raisebox{-0.2\height}{\includegraphics[height=.9em]{<< item.pdf_logo>>}}
+    ~< endif >~
     ~<- if item.title ->~
     \textbf{<< item.title >>}, \emph{<< item.place >>}
     ~<- else ->~

@@ -60,6 +60,7 @@ current_position:
     location: Hong Kong, China
     title: Researcher
     dates: 2025.08 -- Present
+    pdf_logo: huawei_land.pdf
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
 
