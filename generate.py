@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Generates LaTeX, markdown, and plaintext copies of the Awesome-AI4EDA."""
+"""Generates LaTeX, markdown, and plaintext based on yaml."""
 
 __author__ = [
     'Guojin Chen <https://gjchen.me>',

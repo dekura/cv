@@ -32,7 +32,7 @@ order:
   - [honors, Awards]
   # - [projs, Ongoing Projects]
   - [service, Professional Activities]
-  - [teaching, Teaching]
+  # - [teaching, Teaching]
   # - [skills, Skills]
 
 about: |
@@ -41,25 +41,27 @@ about: |
   </p>
   <h3>Research Interests:</h3>
   <ul>
-    <li>Large language models: agentic native LLMs, multimodal LLMs.</li>
+    <li>Large language models: post-training, agentic native LLMs, multimodal LLMs.</li>
     <li>Design for manufacturing: computational lithography, OPC, SMO.</li>
     <li>Optimization: bi-level, multi-level optimization, level-set optimization, GPU acceleration.</li>
   </ul>
-  Check my <a href="https://gjchen.notion.site/" target="_blank">research overview here</a>.
+
+# Check my <a href="https://gjchen.notion.site/" target="_blank">research overview here</a>.
 
 
 
 research_interests:
-  - "Large language models: agentic native LLMs, multimodal LLMs."
+  - "Large language models: post-training, agentic native LLMs, multimodal LLMs."
   - "Design for manufacturing: computational lithography, OPC, SMO."
   - "Optimization: bi-level, multi-level optimization, level-set optimization, GPU acceleration."
 
 current_position:
-  - place: Huawei Noah's Ark Lab
+  - place: Huawei Foundation Models Lab
     location: Hong Kong, China
     title: Researcher
     dates: 2025.08 -- Present
     pdf_logo: huawei_land.pdf
+    details: Working on post-training for foundation models in a coding-focused team, improving the models’ programming and code generation capabilities.
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
 
