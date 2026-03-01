@@ -59,9 +59,12 @@ current_position:
   - place: Huawei Foundation Models Lab
     location: Hong Kong, China
     title: Researcher
-    dates: 2025.08 -- Present
+    dates: 2025.09 -- Present
     pdf_logo: huawei_land.pdf
-    details: Working on post-training for foundation models in a coding-focused team, improving the models’ programming and code generation capabilities.
+    details: 
+      - Focused on post-training for coder foundation models, enhancing reasoning, code generation, and instruction-following capabilities through reinforcement learning and supervised fine-tuning.
+      - Led the development of the coding data infrastructure platform, including code exercise curation pipelines, sandboxed execution environments, and production-grade data processing workflows.
+      - Contributed to the development of an internal agent scaffolding framework, enabling rapid prototyping and deployment of LLM-powered agentic systems.
     # inline_detail: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
     # details: "Supervisor : Prof. \\href{https://users.ece.utexas.edu/~dpan/}{David Z. Pan}"
 
