@@ -90,6 +90,8 @@ education:
     # overallGPA: 3.99/4.00
 
 news:
+  - date: May. 1st, 2026
+    info: Differentiable OPC is now officialy open-sourced <a href="https://github.com/NVlabs/DiffOPC" target="_blank">[NVlabs/DiffOPC]</a>.
   - date: July. 14, 2025
     info: I start my new journey at Huawei Noah's Ark Lab, Hong Kong.
   - date: Mar. 20, 2025
